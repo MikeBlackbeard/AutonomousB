@@ -1,5 +1,5 @@
 # AutonomousB
-                            ~~~~~~~~ Autonomous Systems Lab ~~~~~~~~			                #WS2022/2023 - ELE_7 - HSHL
+               ~~~~~~~~ Autonomous Systems Lab ~~~~~~~~			          #WS2022/2023 - ELE_7 - HSHL
  
 
 We are Team-1 of Autonoumous systems' project and this is our Github repository.
