@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+  <net active="true" id="TAPN1" type="P/T net">
+    <labels border="true" height="20" positionX="278" positionY="1057" width="105">Philosopher 2</labels>
+    <place displayName="true" id="Fork1" initialMarking="1" invariant="&lt; inf" name="Fork1" nameOffsetX="0" nameOffsetY="0" positionX="752" positionY="490"/>
+    <place displayName="true" id="Knife2" initialMarking="1" invariant="&lt; inf" name="Knife2" nameOffsetX="0" nameOffsetY="0" positionX="769" positionY="618"/>
+    <place displayName="true" id="Kinfe1" initialMarking="1" invariant="&lt; inf" name="Kinfe1" nameOffsetX="0" nameOffsetY="0" positionX="890" positionY="490"/>
+    <place displayName="true" id="Fork2" initialMarking="1" invariant="&lt; inf" name="Fork2" nameOffsetX="0" nameOffsetY="0" positionX="881" positionY="616"/>
+    <place displayName="true" id="P8" initialMarking="0" invariant="&lt; inf" name="P8" nameOffsetX="0" nameOffsetY="0" positionX="1060" positionY="544"/>
+    <place displayName="true" id="P9" initialMarking="0" invariant="&lt; inf" name="P9" nameOffsetX="0" nameOffsetY="0" positionX="1202" positionY="544"/>
+    <place displayName="true" id="P10" initialMarking="0" invariant="&lt; inf" name="P10" nameOffsetX="0" nameOffsetY="0" positionX="826" positionY="786"/>
+    <place displayName="true" id="P11" initialMarking="0" invariant="&lt; inf" name="P11" nameOffsetX="0" nameOffsetY="0" positionX="826" positionY="928"/>
+    <place displayName="true" id="P12" initialMarking="0" invariant="&lt; inf" name="P12" nameOffsetX="0" nameOffsetY="0" positionX="570" positionY="552"/>
+    <place displayName="true" id="P13" initialMarking="0" invariant="&lt; inf" name="P13" nameOffsetX="0" nameOffsetY="0" positionX="434" positionY="552"/>
+    <place displayName="true" id="P14" initialMarking="0" invariant="&lt; inf" name="P14" nameOffsetX="0" nameOffsetY="0" positionX="814" positionY="332"/>
+    <place displayName="true" id="P15" initialMarking="0" invariant="&lt; inf" name="P15" nameOffsetX="0" nameOffsetY="0" positionX="814" positionY="212"/>
+    <transition angle="0" displayName="true" id="Philosopher1" infiniteServer="false" name="Philosopher1" nameOffsetX="0" nameOffsetY="0" player="0" positionX="984" positionY="536" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="T7" infiniteServer="false" name="T7" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1134" positionY="544" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="T8" infiniteServer="false" name="T8" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1268" positionY="544" priority="0" urgent="false"/>
+    <transition angle="315" displayName="true" id="Philosopher2" infiniteServer="false" name="Philosopher2" nameOffsetX="0" nameOffsetY="0" player="0" positionX="825" positionY="734" priority="0" urgent="false"/>
+    <transition angle="270" displayName="true" id="T10" infiniteServer="false" name="T10" nameOffsetX="0" nameOffsetY="0" player="0" positionX="826" positionY="860" priority="0" urgent="false"/>
+    <transition angle="270" displayName="true" id="T11" infiniteServer="false" name="T11" nameOffsetX="0" nameOffsetY="0" player="0" positionX="826" positionY="1000" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Philosopher3" infiniteServer="false" name="Philosopher3" nameOffsetX="0" nameOffsetY="0" player="0" positionX="658" positionY="550" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="T13" infiniteServer="false" name="T13" nameOffsetX="0" nameOffsetY="0" player="0" positionX="508" positionY="552" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="T14" infiniteServer="false" name="T14" nameOffsetX="0" nameOffsetY="0" player="0" positionX="354" positionY="548" priority="0" urgent="false"/>
+    <transition angle="90" displayName="true" id="Philosopher4" infiniteServer="false" name="Philosopher4" nameOffsetX="0" nameOffsetY="0" player="0" positionX="816" positionY="394" priority="0" urgent="false"/>
+    <transition angle="90" displayName="true" id="T16" infiniteServer="false" name="T16" nameOffsetX="0" nameOffsetY="0" player="0" positionX="816" positionY="276" priority="0" urgent="false"/>
+    <transition angle="90" displayName="true" id="T17" infiniteServer="false" name="T17" nameOffsetX="0" nameOffsetY="0" player="0" positionX="810" positionY="150" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Kinfe1" target="Philosopher1" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="918" yCoord="510"/>
+      <arcpath arcPointType="false" id="1" xCoord="993" yCoord="542"/>
+    </arc>
+    <arc id="A1" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Fork2" target="Philosopher1" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="907" yCoord="622"/>
+      <arcpath arcPointType="false" id="1" xCoord="992" yCoord="552"/>
+    </arc>
+    <arc id="A2" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Philosopher1" target="P8" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="1002" yCoord="552"/>
+      <arcpath arcPointType="false" id="1" xCoord="1060" yCoord="557"/>
+    </arc>
+    <arc id="A3" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="P8" target="T7" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="1088" yCoord="557"/>
+      <arcpath arcPointType="false" id="1" xCoord="1143" yCoord="553"/>
+    </arc>
+    <arc id="A4" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T7" target="P9" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="1152" yCoord="558"/>
+      <arcpath arcPointType="false" id="1" xCoord="1202" yCoord="558"/>
+    </arc>
+    <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="P9" target="T8" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="1230" yCoord="557"/>
+      <arcpath arcPointType="false" id="1" xCoord="1278" yCoord="553"/>
+    </arc>
+    <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T8" target="Kinfe1" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="1287" yCoord="558"/>
+      <arcpath arcPointType="false" id="1" xCoord="1355" yCoord="560"/>
+      <arcpath arcPointType="false" id="2" xCoord="1356" yCoord="466"/>
+      <arcpath arcPointType="false" id="3" xCoord="991" yCoord="427"/>
+      <arcpath arcPointType="false" id="4" xCoord="915" yCoord="493"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T8" target="Fork2" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="1287" yCoord="558"/>
+      <arcpath arcPointType="false" id="1" xCoord="1352" yCoord="560"/>
+      <arcpath arcPointType="false" id="2" xCoord="1353" yCoord="670"/>
+      <arcpath arcPointType="false" id="3" xCoord="1006" yCoord="667"/>
+      <arcpath arcPointType="false" id="4" xCoord="950" yCoord="651"/>
+      <arcpath arcPointType="false" id="5" xCoord="910" yCoord="637"/>
+    </arc>
+    <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Philosopher2" target="P10" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="837" yCoord="752"/>
+      <arcpath arcPointType="false" id="1" xCoord="840" yCoord="787"/>
+    </arc>
+    <arc id="A11" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="P10" target="T10" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="840" yCoord="815"/>
+      <arcpath arcPointType="false" id="1" xCoord="837" yCoord="868"/>
+    </arc>
+    <arc id="A12" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T10" target="P11" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="842" yCoord="880"/>
+      <arcpath arcPointType="false" id="1" xCoord="842" yCoord="928"/>
+    </arc>
+    <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="P11" target="T11" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="840" yCoord="957"/>
+      <arcpath arcPointType="false" id="1" xCoord="837" yCoord="1008"/>
+    </arc>
+    <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T11" target="Fork2" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="842" yCoord="1020"/>
+      <arcpath arcPointType="false" id="1" xCoord="844" yCoord="1090"/>
+      <arcpath arcPointType="false" id="2" xCoord="936" yCoord="1086"/>
+      <arcpath arcPointType="false" id="3" xCoord="897" yCoord="645"/>
+    </arc>
+    <arc id="A15" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T11" target="Knife2" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="842" yCoord="1020"/>
+      <arcpath arcPointType="false" id="1" xCoord="833" yCoord="1106"/>
+      <arcpath arcPointType="false" id="2" xCoord="726" yCoord="1092"/>
+      <arcpath arcPointType="false" id="3" xCoord="780" yCoord="647"/>
+    </arc>
+    <arc id="A16" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Knife2" target="Philosopher3" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="770" yCoord="625"/>
+      <arcpath arcPointType="false" id="1" xCoord="677" yCoord="567"/>
+    </arc>
+    <arc id="A17" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Fork1" target="Philosopher3" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="753" yCoord="512"/>
+      <arcpath arcPointType="false" id="1" xCoord="678" yCoord="555"/>
+    </arc>
+    <arc id="A18" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Philosopher3" target="P12" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="667" yCoord="565"/>
+      <arcpath arcPointType="false" id="1" xCoord="598" yCoord="565"/>
+    </arc>
+    <arc id="A19" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="P12" target="T13" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="570" yCoord="567"/>
+      <arcpath arcPointType="false" id="1" xCoord="527" yCoord="572"/>
+    </arc>
+    <arc id="A20" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T13" target="P13" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="517" yCoord="567"/>
+      <arcpath arcPointType="false" id="1" xCoord="463" yCoord="567"/>
+    </arc>
+    <arc id="A21" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="P13" target="T14" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="433" yCoord="565"/>
+      <arcpath arcPointType="false" id="1" xCoord="373" yCoord="558"/>
+    </arc>
+    <arc id="A22" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T14" target="Fork1" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="362" yCoord="563"/>
+      <arcpath arcPointType="false" id="1" xCoord="253" yCoord="560"/>
+      <arcpath arcPointType="false" id="2" xCoord="252" yCoord="460"/>
+      <arcpath arcPointType="false" id="3" xCoord="583" yCoord="465"/>
+      <arcpath arcPointType="false" id="4" xCoord="752" yCoord="502"/>
+    </arc>
+    <arc id="A23" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T14" target="Knife2" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="362" yCoord="563"/>
+      <arcpath arcPointType="false" id="1" xCoord="249" yCoord="561"/>
+      <arcpath arcPointType="false" id="2" xCoord="251" yCoord="662"/>
+      <arcpath arcPointType="false" id="3" xCoord="564" yCoord="653"/>
+      <arcpath arcPointType="false" id="4" xCoord="768" yCoord="633"/>
+    </arc>
+    <arc id="A24" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Fork1" target="Philosopher4" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="773" yCoord="492"/>
+      <arcpath arcPointType="false" id="1" xCoord="822" yCoord="412"/>
+    </arc>
+    <arc id="A25" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Kinfe1" target="Philosopher4" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="895" yCoord="492"/>
+      <arcpath arcPointType="false" id="1" xCoord="840" yCoord="413"/>
+    </arc>
+    <arc id="A26" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Philosopher4" target="P14" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="830" yCoord="402"/>
+      <arcpath arcPointType="false" id="1" xCoord="828" yCoord="360"/>
+    </arc>
+    <arc id="A27" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="P14" target="T16" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="830" yCoord="332"/>
+      <arcpath arcPointType="false" id="1" xCoord="835" yCoord="297"/>
+    </arc>
+    <arc id="A28" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T16" target="P15" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="830" yCoord="285"/>
+      <arcpath arcPointType="false" id="1" xCoord="828" yCoord="240"/>
+    </arc>
+    <arc id="A29" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="P15" target="T17" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="828" yCoord="212"/>
+      <arcpath arcPointType="false" id="1" xCoord="828" yCoord="170"/>
+    </arc>
+    <arc id="A30" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T17" target="Kinfe1" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="823" yCoord="158"/>
+      <arcpath arcPointType="false" id="1" xCoord="830" yCoord="115"/>
+      <arcpath arcPointType="false" id="2" xCoord="935" yCoord="115"/>
+      <arcpath arcPointType="false" id="3" xCoord="905" yCoord="490"/>
+    </arc>
+    <arc id="A31" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T17" target="Fork1" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="823" yCoord="158"/>
+      <arcpath arcPointType="false" id="1" xCoord="815" yCoord="110"/>
+      <arcpath arcPointType="false" id="2" xCoord="706" yCoord="114"/>
+      <arcpath arcPointType="false" id="3" xCoord="763" yCoord="490"/>
+    </arc>
+    <arc id="A32" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Fork2" target="Philosopher2" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="890" yCoord="645"/>
+      <arcpath arcPointType="false" id="1" xCoord="843" yCoord="743"/>
+    </arc>
+    <arc id="A33" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Knife2" target="Philosopher2" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="788" yCoord="647"/>
+      <arcpath arcPointType="false" id="1" xCoord="828" yCoord="737"/>
+    </arc>
+  </net>
+  <k-bound bound="3"/>
+  <feature isGame="false" isTimed="false"/>
+</pnml>
