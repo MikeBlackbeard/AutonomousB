@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+  <net active="true" id="Escalator" type="P/T net">
+    <place displayName="true" id="SleepMode" initialMarking="0" invariant="&lt; inf" name="SleepMode" nameOffsetX="0" nameOffsetY="0" positionX="300" positionY="240"/>
+    <place displayName="true" id="Up" initialMarking="0" invariant="&lt; inf" name="Up" nameOffsetX="0" nameOffsetY="0" positionX="750" positionY="225"/>
+    <place displayName="true" id="Down" initialMarking="0" invariant="&lt; inf" name="Down" nameOffsetX="0" nameOffsetY="0" positionX="750" positionY="405"/>
+    <place displayName="true" id="OutOfSevice" initialMarking="0" invariant="&lt; inf" name="OutOfSevice" nameOffsetX="0" nameOffsetY="0" positionX="300" positionY="405"/>
+    <transition angle="0" displayName="true" id="Activate" infiniteServer="false" name="Activate" nameOffsetX="0" nameOffsetY="0" player="0" positionX="510" positionY="210" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Move" infiniteServer="false" name="Move" nameOffsetX="0" nameOffsetY="0" player="0" positionX="750" positionY="315" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Desactivate" infiniteServer="false" name="Desactivate" nameOffsetX="0" nameOffsetY="0" player="0" positionX="525" positionY="405" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Repair" infiniteServer="false" name="Repair" nameOffsetX="0" nameOffsetY="0" player="0" positionX="165" positionY="315" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[1,1]" nameOffsetX="0" nameOffsetY="0" source="SleepMode" target="Activate" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="329" yCoord="252"/>
+      <arcpath arcPointType="false" id="1" xCoord="519" yCoord="226"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Activate" target="Up" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="529" yCoord="225"/>
+      <arcpath arcPointType="false" id="1" xCoord="750" yCoord="239"/>
+    </arc>
+    <arc id="A2" inscription="[7,7]" nameOffsetX="0" nameOffsetY="0" source="Up" target="Move" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="765" yCoord="255"/>
+      <arcpath arcPointType="false" id="1" xCoord="765" yCoord="315"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move" target="Down" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="765" yCoord="345"/>
+      <arcpath arcPointType="false" id="1" xCoord="765" yCoord="405"/>
+    </arc>
+    <arc id="A4" inscription="[10,15]" nameOffsetX="0" nameOffsetY="0" source="Down" target="Desactivate" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="750" yCoord="420"/>
+      <arcpath arcPointType="false" id="1" xCoord="544" yCoord="425"/>
+    </arc>
+    <arc id="A5" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Desactivate" target="SleepMode" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="534" yCoord="420"/>
+      <arcpath arcPointType="false" id="1" xCoord="326" yCoord="264"/>
+    </arc>
+    <arc id="A6" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="OutOfSevice" target="Repair" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="302" yCoord="411"/>
+      <arcpath arcPointType="false" id="1" xCoord="184" yCoord="335"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Repair" target="SleepMode" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="185" yCoord="322"/>
+      <arcpath arcPointType="false" id="1" xCoord="301" yCoord="261"/>
+    </arc>
+  </net>
+  <net active="true" id="DetectionSensor" type="P/T net">
+    <place displayName="true" id="SleepMode" initialMarking="0" invariant="&lt; inf" name="SleepMode" nameOffsetX="0" nameOffsetY="0" positionX="300" positionY="195"/>
+    <place displayName="true" id="GreenLight" initialMarking="0" invariant="&lt; inf" name="GreenLight" nameOffsetX="0" nameOffsetY="0" positionX="645" positionY="150"/>
+    <place displayName="true" id="OutOfService" initialMarking="0" invariant="&lt; inf" name="OutOfService" nameOffsetX="0" nameOffsetY="0" positionX="630" positionY="465"/>
+    <place displayName="true" id="RedLight" initialMarking="0" invariant="&lt; inf" name="RedLight" nameOffsetX="0" nameOffsetY="0" positionX="315" positionY="405"/>
+    <transition angle="0" displayName="true" id="Detect" infiniteServer="false" name="Detect" nameOffsetX="0" nameOffsetY="0" player="0" positionX="450" positionY="150" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Desactivate" infiniteServer="false" name="Desactivate" nameOffsetX="0" nameOffsetY="0" player="0" positionX="495" positionY="315" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Notify" infiniteServer="false" name="Notify" nameOffsetX="0" nameOffsetY="0" player="0" positionX="465" positionY="465" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Repair" infiniteServer="false" name="Repair" nameOffsetX="0" nameOffsetY="0" player="0" positionX="240" positionY="300" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[1,1]" nameOffsetX="0" nameOffsetY="0" source="SleepMode" target="Detect" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="329" yCoord="205"/>
+      <arcpath arcPointType="false" id="1" xCoord="459" yCoord="170"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Detect" target="GreenLight" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="469" yCoord="165"/>
+      <arcpath arcPointType="false" id="1" xCoord="645" yCoord="165"/>
+    </arc>
+    <arc id="A2" inscription="[10,15]" nameOffsetX="0" nameOffsetY="0" source="GreenLight" target="Desactivate" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="176"/>
+      <arcpath arcPointType="false" id="1" xCoord="514" yCoord="330"/>
+    </arc>
+    <arc id="A4" inscription="[1,2]" nameOffsetX="0" nameOffsetY="0" source="OutOfService" target="Notify" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="630" yCoord="480"/>
+      <arcpath arcPointType="false" id="1" xCoord="484" yCoord="485"/>
+    </arc>
+    <arc id="A5" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Notify" target="RedLight" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="474" yCoord="480"/>
+      <arcpath arcPointType="false" id="1" xCoord="343" yCoord="425"/>
+    </arc>
+    <arc id="A6" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="RedLight" target="Repair" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="321" yCoord="407"/>
+      <arcpath arcPointType="false" id="1" xCoord="259" yCoord="315"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Repair" target="SleepMode" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="300"/>
+      <arcpath arcPointType="false" id="1" xCoord="306" yCoord="222"/>
+    </arc>
+    <arc id="A8" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Desactivate" target="SleepMode" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="504" yCoord="330"/>
+      <arcpath arcPointType="false" id="1" xCoord="327" yCoord="218"/>
+    </arc>
+  </net>
+  <k-bound bound="3"/>
+  <feature isGame="false" isTimed="true"/>
+</pnml>

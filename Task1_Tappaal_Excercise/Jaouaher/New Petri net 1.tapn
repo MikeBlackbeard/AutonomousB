@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+  <shared-place initialMarking="0" invariant="&lt; inf" name="OutOfService"/>
+  <shared-place initialMarking="1" invariant="&lt; inf" name="SleepMode"/>
+  <net active="true" id="Escalator1" type="P/T net">
+    <place displayName="true" id="SleepMode" initialMarking="1" invariant="&lt; inf" name="SleepMode" nameOffsetX="0" nameOffsetY="0" positionX="255" positionY="225"/>
+    <place displayName="true" id="UP" initialMarking="0" invariant="&lt; inf" name="UP" nameOffsetX="0" nameOffsetY="0" positionX="870" positionY="225"/>
+    <place displayName="true" id="Down" initialMarking="0" invariant="&lt; inf" name="Down" nameOffsetX="0" nameOffsetY="0" positionX="600" positionY="360"/>
+    <place displayName="true" id="OutOfService" initialMarking="0" invariant="&lt; inf" name="OutOfService" nameOffsetX="0" nameOffsetY="0" positionX="330" positionY="495"/>
+    <transition angle="0" displayName="true" id="Activate" infiniteServer="false" name="Activate" nameOffsetX="0" nameOffsetY="0" player="0" positionX="585" positionY="225" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Move" infiniteServer="false" name="Move" nameOffsetX="0" nameOffsetY="0" player="0" positionX="795" positionY="360" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Desactivate" infiniteServer="false" name="Desactivate" nameOffsetX="0" nameOffsetY="0" player="0" positionX="255" positionY="360" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="repair" infiniteServer="false" name="repair" nameOffsetX="0" nameOffsetY="0" player="0" positionX="90" positionY="375" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[0,inf)" nameOffsetX="-8" nameOffsetY="-15" source="SleepMode" target="Activate" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="284" yCoord="239"/>
+      <arcpath arcPointType="false" id="1" xCoord="595" yCoord="235"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Activate" target="UP" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="604" yCoord="240"/>
+      <arcpath arcPointType="false" id="1" xCoord="870" yCoord="240"/>
+    </arc>
+    <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="UP" target="Move" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="877" yCoord="252"/>
+      <arcpath arcPointType="false" id="1" xCoord="810" yCoord="360"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move" target="Down" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="805" yCoord="370"/>
+      <arcpath arcPointType="false" id="1" xCoord="629" yCoord="374"/>
+    </arc>
+    <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Down" target="Desactivate" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="600" yCoord="374"/>
+      <arcpath arcPointType="false" id="1" xCoord="275" yCoord="370"/>
+    </arc>
+    <arc id="A5" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Desactivate" target="SleepMode" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="360"/>
+      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="255"/>
+    </arc>
+    <arc id="A6" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="OutOfService" target="repair" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="330" yCoord="510"/>
+      <arcpath arcPointType="false" id="1" xCoord="191" yCoord="510"/>
+      <arcpath arcPointType="false" id="2" xCoord="109" yCoord="396"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="repair" target="SleepMode" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="110" yCoord="382"/>
+      <arcpath arcPointType="false" id="1" xCoord="258" yCoord="249"/>
+    </arc>
+  </net>
+  <k-bound bound="3"/>
+  <feature isGame="false" isTimed="true"/>
+</pnml>
