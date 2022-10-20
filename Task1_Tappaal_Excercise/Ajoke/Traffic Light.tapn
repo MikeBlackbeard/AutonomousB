@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+  <net active="true" id="Pedestrian" type="P/T net">
+    <place displayName="true" id="unpressed" initialMarking="1" invariant="&lt; inf" name="unpressed" nameOffsetX="0" nameOffsetY="0" positionX="600" positionY="105"/>
+    <place displayName="true" id="pressed" initialMarking="0" invariant="&lt; inf" name="pressed" nameOffsetX="0" nameOffsetY="0" positionX="390" positionY="135"/>
+    <place displayName="true" id="green" initialMarking="0" invariant="&lt; inf" name="green" nameOffsetX="0" nameOffsetY="0" positionX="525" positionY="315"/>
+    <place displayName="true" id="red" initialMarking="1" invariant="&lt; inf" name="red" nameOffsetX="0" nameOffsetY="0" positionX="495" positionY="150"/>
+    <transition angle="0" displayName="true" id="press_button" infiniteServer="false" name="press_button" nameOffsetX="0" nameOffsetY="0" player="0" positionX="495" positionY="30" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="turn_green" infiniteServer="false" name="turn_green" nameOffsetX="0" nameOffsetY="0" player="0" positionX="390" positionY="255" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="turn_red" infiniteServer="false" name="turn_red" nameOffsetX="0" nameOffsetY="0" player="0" positionX="600" positionY="210" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="unpressed" target="press_button" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="602" yCoord="111"/>
+      <arcpath arcPointType="false" id="1" xCoord="514" yCoord="45"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="press_button" target="pressed" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="504" yCoord="45"/>
+      <arcpath arcPointType="false" id="1" xCoord="415" yCoord="139"/>
+    </arc>
+    <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pressed" target="turn_green" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="405" yCoord="165"/>
+      <arcpath arcPointType="false" id="1" xCoord="405" yCoord="255"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="turn_green" target="green" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="409" yCoord="275"/>
+      <arcpath arcPointType="false" id="1" xCoord="526" yCoord="324"/>
+    </arc>
+    <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="green" target="turn_red" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="548" yCoord="317"/>
+      <arcpath arcPointType="false" id="1" xCoord="609" yCoord="230"/>
+    </arc>
+    <arc id="A5" inscription="1" nameOffsetX="0" nameOffsetY="0" source="turn_red" target="unpressed" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="615" yCoord="210"/>
+      <arcpath arcPointType="false" id="1" xCoord="615" yCoord="135"/>
+    </arc>
+    <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="turn_red" target="red" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="610" yCoord="220"/>
+      <arcpath arcPointType="false" id="1" xCoord="523" yCoord="172"/>
+    </arc>
+    <arc id="A7" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="red" target="turn_green" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="499" yCoord="175"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="265"/>
+    </arc>
+  </net>
+  <net active="true" id="cars" type="P/T net">
+    <place displayName="true" id="red" initialMarking="1" invariant="&lt; inf" name="red" nameOffsetX="0" nameOffsetY="0" positionX="345" positionY="45"/>
+    <place displayName="true" id="green" initialMarking="0" invariant="&lt; inf" name="green" nameOffsetX="0" nameOffsetY="0" positionX="450" positionY="150"/>
+    <place displayName="true" id="yellow" initialMarking="0" invariant="&lt; inf" name="yellow" nameOffsetX="0" nameOffsetY="0" positionX="240" positionY="150"/>
+    <transition angle="0" displayName="true" id="turn_yellow" infiniteServer="false" name="turn_yellow" nameOffsetX="0" nameOffsetY="0" player="0" positionX="240" positionY="45" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="turn_green" infiniteServer="false" name="turn_green" nameOffsetX="0" nameOffsetY="0" player="0" positionX="345" positionY="150" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="turn_red" infiniteServer="false" name="turn_red" nameOffsetX="0" nameOffsetY="0" player="0" positionX="450" positionY="45" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="red" target="turn_yellow" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="345" yCoord="60"/>
+      <arcpath arcPointType="false" id="1" xCoord="259" yCoord="60"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="turn_yellow" target="yellow" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="75"/>
+      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="150"/>
+    </arc>
+    <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="yellow" target="turn_green" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="165"/>
+      <arcpath arcPointType="false" id="1" xCoord="354" yCoord="165"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="turn_green" target="green" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="364" yCoord="165"/>
+      <arcpath arcPointType="false" id="1" xCoord="450" yCoord="165"/>
+    </arc>
+    <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="green" target="turn_red" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="465" yCoord="150"/>
+      <arcpath arcPointType="false" id="1" xCoord="465" yCoord="75"/>
+    </arc>
+    <arc id="A5" inscription="1" nameOffsetX="0" nameOffsetY="0" source="turn_red" target="red" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="459" yCoord="60"/>
+      <arcpath arcPointType="false" id="1" xCoord="375" yCoord="60"/>
+    </arc>
+  </net>
+  <query active="true" algorithmOption="CERTAIN_ZERO" approximationDenominator="0" capacity="4" discreteInclusion="false" enableOverApproximation="false" enableUnderApproximation="false" extrapolationOption="null" gcd="false" hashTableSize="null" inclusionPlaces="*NONE*" name="Absence of Deadlock" overApproximation="false" pTrie="false" reduction="true" reductionOption="VerifyPN" searchOption="HEURISTIC" symmetry="false" timeDarts="false" traceOption="NONE" type="CTL" useQueryReduction="true" useSiphonTrapAnalysis="false" useStubbornReduction="true" useTarOption="false" useTarjan="true">
+    <formula>
+            
+      <all-paths>
+                
+        <globally>
+                    
+          <negation>
+                        
+            <deadlock/>
+                      
+          </negation>
+                  
+        </globally>
+              
+      </all-paths>
+          
+    </formula>
+  </query>
+  <k-bound bound="3"/>
+  <feature isGame="false" isTimed="false"/>
+</pnml>
