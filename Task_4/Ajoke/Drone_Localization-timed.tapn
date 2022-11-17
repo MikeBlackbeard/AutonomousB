@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+  <net active="true" id="Localization_Drone" type="P/T net">
+    <place displayName="true" id="Positioning" initialMarking="0" invariant="&lt; inf" name="Positioning" nameOffsetX="0" nameOffsetY="0" positionX="240" positionY="255"/>
+    <place displayName="true" id="Drone_ready" initialMarking="1" invariant="&lt; inf" name="Drone_ready" nameOffsetX="0" nameOffsetY="0" positionX="435" positionY="30"/>
+    <place displayName="true" id="correct_position" initialMarking="0" invariant="&lt; inf" name="correct_position" nameOffsetX="0" nameOffsetY="0" positionX="375" positionY="465"/>
+    <place displayName="true" id="position_identified" initialMarking="0" invariant="&lt; inf" name="position_identified" nameOffsetX="58" nameOffsetY="-6" positionX="660" positionY="390"/>
+    <place displayName="true" id="trajectory_info" initialMarking="0" invariant="&lt; inf" name="trajectory_info" nameOffsetX="0" nameOffsetY="0" positionX="720" positionY="135"/>
+    <transition angle="0" displayName="true" id="Identify_position" infiniteServer="false" name="Identify_position" nameOffsetX="28" nameOffsetY="-5" player="0" positionX="585" positionY="465" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="record_trajectory" infiniteServer="false" name="record_trajectory" nameOffsetX="14" nameOffsetY="-1" player="0" positionX="720" positionY="255" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="navigate_field" infiniteServer="false" name="navigate_field" nameOffsetX="0" nameOffsetY="0" player="0" positionX="420" positionY="150" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="check_position" infiniteServer="false" name="check_position" nameOffsetX="0" nameOffsetY="0" player="0" positionX="255" positionY="405" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="send_to_system" infiniteServer="false" name="send_to_system" nameOffsetX="49" nameOffsetY="-7" player="0" positionX="615" positionY="60" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Not_correct" infiniteServer="false" name="Not_correct" nameOffsetX="0" nameOffsetY="0" player="0" positionX="435" positionY="255" priority="0" urgent="false"/>
+    <arc id="A1" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Drone_ready" target="navigate_field" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="447" yCoord="59"/>
+      <arcpath arcPointType="false" id="1" xCoord="435" yCoord="150"/>
+    </arc>
+    <arc id="A2" inscription="1" nameOffsetX="0" nameOffsetY="0" source="navigate_field" target="Positioning" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="429" yCoord="165"/>
+      <arcpath arcPointType="false" id="1" xCoord="267" yCoord="262"/>
+    </arc>
+    <arc id="A3" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Positioning" target="check_position" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="256" yCoord="284"/>
+      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="405"/>
+    </arc>
+    <arc id="A4" inscription="1" nameOffsetX="0" nameOffsetY="0" source="check_position" target="correct_position" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="274" yCoord="420"/>
+      <arcpath arcPointType="false" id="1" xCoord="376" yCoord="473"/>
+    </arc>
+    <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="correct_position" target="Identify_position" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="404" yCoord="480"/>
+      <arcpath arcPointType="false" id="1" xCoord="594" yCoord="485"/>
+    </arc>
+    <arc id="A6" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="correct_position" target="Not_correct" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="394" yCoord="465"/>
+      <arcpath arcPointType="false" id="1" xCoord="450" yCoord="285"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Not_correct" target="Positioning" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="444" yCoord="270"/>
+      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="270"/>
+    </arc>
+    <arc id="A8" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Identify_position" target="position_identified" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="604" yCoord="480"/>
+      <arcpath arcPointType="false" id="1" xCoord="664" yCoord="415"/>
+    </arc>
+    <arc id="A9" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="position_identified" target="record_trajectory" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="681" yCoord="391"/>
+      <arcpath arcPointType="false" id="1" xCoord="735" yCoord="285"/>
+    </arc>
+    <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="record_trajectory" target="trajectory_info" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="735" yCoord="255"/>
+      <arcpath arcPointType="false" id="1" xCoord="735" yCoord="165"/>
+    </arc>
+    <arc id="A11" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="trajectory_info" target="send_to_system" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="722" yCoord="141"/>
+      <arcpath arcPointType="false" id="1" xCoord="634" yCoord="75"/>
+    </arc>
+    <arc id="A12" inscription="1" nameOffsetX="0" nameOffsetY="0" source="send_to_system" target="Drone_ready" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="624" yCoord="75"/>
+      <arcpath arcPointType="false" id="1" xCoord="464" yCoord="47"/>
+    </arc>
+  </net>
+  <query active="true" approximationDenominator="2" capacity="4" discreteInclusion="false" enableOverApproximation="false" enableUnderApproximation="false" extrapolationOption="null" gcd="false" hashTableSize="null" inclusionPlaces="*NONE*" name="Absence of deadlock" overApproximation="false" pTrie="true" query="AG !(deadlock)" reduction="true" reductionOption="VerifyTAPNdiscreteVerification" searchOption="HEURISTIC" symmetry="true" timeDarts="false" traceOption="NONE" useStubbornReduction="true" useTarOption="false"/>
+  <query active="true" approximationDenominator="2" capacity="4" discreteInclusion="false" enableOverApproximation="false" enableUnderApproximation="false" extrapolationOption="null" gcd="true" hashTableSize="null" inclusionPlaces="*NONE*" name="Reachability" overApproximation="true" pTrie="true" query="EF true" reduction="true" reductionOption="VerifyTAPNdiscreteVerification" searchOption="HEURISTIC" symmetry="true" timeDarts="false" traceOption="NONE" useStubbornReduction="true" useTarOption="false"/>
+  <k-bound bound="3"/>
+  <feature isGame="false" isTimed="true"/>
+</pnml>
