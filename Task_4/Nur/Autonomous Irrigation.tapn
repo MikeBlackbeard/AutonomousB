@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+  <shared-transition name="Transmit_Data" player="0" urgent="false"/>
+  <shared-transition name="Processing_Data" player="0" urgent="false"/>
+  <shared-transition name="Data_Read" player="0" urgent="false"/>
+  <shared-transition name="Transmit_Data_To_Drone" player="0" urgent="false"/>
+  <shared-transition name="Transmit_Data_To_Irrigation_System" player="0" urgent="false"/>
+  <shared-transition name="Receive_data_from_Drone" player="0" urgent="false"/>
+  <net active="true" id="Moisture_Sensor" type="P/T net">
+    <place displayName="true" id="Ini" initialMarking="1" invariant="&lt; inf" name="Ini" nameOffsetX="0" nameOffsetY="0" positionX="225" positionY="60"/>
+    <place displayName="true" id="Water_Level_Measured" initialMarking="0" invariant="&lt; inf" name="Water_Level_Measured" nameOffsetX="0" nameOffsetY="0" positionX="225" positionY="240"/>
+    <place displayName="true" id="Data_Transmission" initialMarking="0" invariant="&lt; inf" name="Data_Transmission" nameOffsetX="0" nameOffsetY="0" positionX="225" positionY="390"/>
+    <place displayName="true" id="Final_state" initialMarking="0" invariant="&lt; inf" name="Final_state" nameOffsetX="0" nameOffsetY="0" positionX="225" positionY="600"/>
+    <transition angle="0" displayName="true" id="Measuring_water_level" infiniteServer="false" name="Measuring_water_level" nameOffsetX="0" nameOffsetY="0" player="0" positionX="225" positionY="165" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Transmit_Data_To_Drone" infiniteServer="false" name="Transmit_Data_To_Drone" nameOffsetX="0" nameOffsetY="0" player="0" positionX="225" positionY="315" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Completing_Task" infiniteServer="false" name="Completing_Task" nameOffsetX="0" nameOffsetY="0" player="0" positionX="225" positionY="495" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Repeat" infiniteServer="false" name="Repeat" nameOffsetX="-9" nameOffsetY="15" player="0" positionX="450" positionY="315" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Ini" target="Measuring_water_level" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="240" yCoord="90"/>
+      <arcpath arcPointType="false" id="1" xCoord="240" yCoord="165"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Measuring_water_level" target="Water_Level_Measured" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="240" yCoord="195"/>
+      <arcpath arcPointType="false" id="1" xCoord="240" yCoord="240"/>
+    </arc>
+    <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Water_Level_Measured" target="Transmit_Data_To_Drone" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="240" yCoord="270"/>
+      <arcpath arcPointType="false" id="1" xCoord="240" yCoord="315"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Transmit_Data_To_Drone" target="Data_Transmission" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="240" yCoord="345"/>
+      <arcpath arcPointType="false" id="1" xCoord="240" yCoord="390"/>
+    </arc>
+    <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Data_Transmission" target="Completing_Task" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="240" yCoord="420"/>
+      <arcpath arcPointType="false" id="1" xCoord="240" yCoord="495"/>
+    </arc>
+    <arc id="A5" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Completing_Task" target="Final_state" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="240" yCoord="525"/>
+      <arcpath arcPointType="false" id="1" xCoord="240" yCoord="600"/>
+    </arc>
+    <arc id="A6" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Final_state" target="Repeat" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="249" yCoord="603"/>
+      <arcpath arcPointType="false" id="1" xCoord="459" yCoord="335"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Repeat" target="Ini" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="460" yCoord="325"/>
+      <arcpath arcPointType="false" id="1" xCoord="249" yCoord="86"/>
+    </arc>
+  </net>
+  <net active="true" id="Monitoring_Drone" type="P/T net">
+    <place displayName="true" id="Ini" initialMarking="1" invariant="&lt; inf" name="Ini" nameOffsetX="0" nameOffsetY="0" positionX="270" positionY="90"/>
+    <place displayName="true" id="Receiving_Data" initialMarking="0" invariant="&lt; inf" name="Receiving_Data" nameOffsetX="0" nameOffsetY="0" positionX="270" positionY="240"/>
+    <place displayName="true" id="Transmitting_Data" initialMarking="0" invariant="&lt; inf" name="Transmitting_Data" nameOffsetX="0" nameOffsetY="0" positionX="270" positionY="375"/>
+    <place displayName="true" id="Final_state" initialMarking="0" invariant="&lt; inf" name="Final_state" nameOffsetX="0" nameOffsetY="0" positionX="270" positionY="525"/>
+    <transition angle="0" displayName="true" id="Data_Transmission" infiniteServer="false" name="Data_Transmission" nameOffsetX="0" nameOffsetY="0" player="0" positionX="270" positionY="165" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Transmit_Data_To_Irrigation_System" infiniteServer="false" name="Transmit_Data_To_Irrigation_System" nameOffsetX="0" nameOffsetY="0" player="0" positionX="270" positionY="300" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Completing_Task" infiniteServer="false" name="Completing_Task" nameOffsetX="0" nameOffsetY="0" player="0" positionX="270" positionY="450" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="repeat" infiniteServer="false" name="repeat" nameOffsetX="-15" nameOffsetY="18" player="0" positionX="540" positionY="300" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Ini" target="Data_Transmission" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="285" yCoord="120"/>
+      <arcpath arcPointType="false" id="1" xCoord="285" yCoord="165"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Data_Transmission" target="Receiving_Data" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="285" yCoord="195"/>
+      <arcpath arcPointType="false" id="1" xCoord="285" yCoord="240"/>
+    </arc>
+    <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Receiving_Data" target="Transmit_Data_To_Irrigation_System" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="285" yCoord="270"/>
+      <arcpath arcPointType="false" id="1" xCoord="285" yCoord="300"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Transmit_Data_To_Irrigation_System" target="Transmitting_Data" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="285" yCoord="330"/>
+      <arcpath arcPointType="false" id="1" xCoord="285" yCoord="375"/>
+    </arc>
+    <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Transmitting_Data" target="Completing_Task" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="285" yCoord="405"/>
+      <arcpath arcPointType="false" id="1" xCoord="285" yCoord="450"/>
+    </arc>
+    <arc id="A5" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Completing_Task" target="Final_state" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="285" yCoord="480"/>
+      <arcpath arcPointType="false" id="1" xCoord="285" yCoord="525"/>
+    </arc>
+    <arc id="A6" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Final_state" target="repeat" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="296" yCoord="530"/>
+      <arcpath arcPointType="false" id="1" xCoord="549" yCoord="320"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="repeat" target="Ini" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="550" yCoord="310"/>
+      <arcpath arcPointType="false" id="1" xCoord="296" yCoord="114"/>
+    </arc>
+  </net>
+  <net active="true" id="Irrigation_System" type="P/T net">
+    <place displayName="true" id="Ini" initialMarking="1" invariant="&lt; inf" name="Ini" nameOffsetX="-8" nameOffsetY="22" positionX="461" positionY="35"/>
+    <place displayName="true" id="Water_Pump" initialMarking="0" invariant="&lt; inf" name="Water_Pump" nameOffsetX="-11" nameOffsetY="18" positionX="455" positionY="683"/>
+    <place displayName="true" id="Receiving_Data" initialMarking="0" invariant="&lt; inf" name="Receiving_Data" nameOffsetX="0" nameOffsetY="0" positionX="450" positionY="375"/>
+    <transition angle="90" displayName="true" id="Turning_On_or_off" infiniteServer="false" name="Turning_On_or_off" nameOffsetX="-15" nameOffsetY="25" player="0" positionX="455" positionY="514" priority="0" urgent="false"/>
+    <transition angle="180" displayName="true" id="T4" infiniteServer="false" name="T4" nameOffsetX="-9" nameOffsetY="18" player="0" positionX="870" positionY="341" priority="0" urgent="false"/>
+    <transition angle="90" displayName="true" id="Receive_data_from_Drone" infiniteServer="false" name="Receive_data_from_Drone" nameOffsetX="1" nameOffsetY="0" player="0" positionX="450" positionY="180" priority="0" urgent="false"/>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Turning_On_or_off" target="Water_Pump" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="473" yCoord="537"/>
+      <arcpath arcPointType="false" id="1" xCoord="473" yCoord="687"/>
+    </arc>
+    <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Water_Pump" target="T4" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="485" yCoord="692"/>
+      <arcpath arcPointType="false" id="1" xCoord="883" yCoord="364"/>
+    </arc>
+    <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Ini" target="Receive_data_from_Drone" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="478" yCoord="68"/>
+      <arcpath arcPointType="false" id="1" xCoord="468" yCoord="193"/>
+    </arc>
+    <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Receive_data_from_Drone" target="Receiving_Data" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="468" yCoord="203"/>
+      <arcpath arcPointType="false" id="1" xCoord="468" yCoord="379"/>
+    </arc>
+    <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Receiving_Data" target="Turning_On_or_off" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="469" yCoord="408"/>
+      <arcpath arcPointType="false" id="1" xCoord="473" yCoord="527"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T4" target="Ini" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="884" yCoord="354"/>
+      <arcpath arcPointType="false" id="1" xCoord="492" yCoord="62"/>
+    </arc>
+  </net>
+  <k-bound bound="3"/>
+  <feature isGame="false" isTimed="false"/>
+</pnml>
