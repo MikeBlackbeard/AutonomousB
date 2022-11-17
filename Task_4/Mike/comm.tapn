@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+  <net active="true" id="TAPN1" type="P/T net">
+    <place displayName="true" id="message_in" initialMarking="1" invariant="&lt; inf" name="message_in" nameOffsetX="0" nameOffsetY="0" positionX="480" positionY="240"/>
+    <place displayName="true" id="message_out" initialMarking="1" invariant="&lt; inf" name="message_out" nameOffsetX="0" nameOffsetY="0" positionX="480" positionY="585"/>
+    <place displayName="true" id="idle" initialMarking="1" invariant="&lt; inf" name="idle" nameOffsetX="0" nameOffsetY="0" positionX="165" positionY="405"/>
+    <place displayName="true" id="receive_ready" initialMarking="0" invariant="&lt; inf" name="receive_ready" nameOffsetX="0" nameOffsetY="0" positionX="360" positionY="330"/>
+    <place displayName="true" id="send_ready" initialMarking="0" invariant="&lt; inf" name="send_ready" nameOffsetX="0" nameOffsetY="0" positionX="360" positionY="495"/>
+    <place displayName="true" id="P5" initialMarking="0" invariant="&lt; inf" name="P5" nameOffsetX="0" nameOffsetY="0" positionX="705" positionY="330"/>
+    <place displayName="true" id="storage" initialMarking="0" invariant="&lt; inf" name="storage" nameOffsetX="0" nameOffsetY="0" positionX="990" positionY="375"/>
+    <place displayName="true" id="aknwolegment" initialMarking="0" invariant="&lt; inf" name="aknwolegment" nameOffsetX="0" nameOffsetY="0" positionX="735" positionY="540"/>
+    <transition angle="0" displayName="true" id="enable_system" infiniteServer="false" name="enable_system" nameOffsetX="0" nameOffsetY="0" player="0" positionX="255" positionY="405" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="receive_message" infiniteServer="false" name="receive_message" nameOffsetX="0" nameOffsetY="0" player="0" positionX="555" positionY="300" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="send_message" infiniteServer="false" name="send_message" nameOffsetX="0" nameOffsetY="0" player="0" positionX="555" positionY="525" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="collect_messages" infiniteServer="false" name="collect_messages" nameOffsetX="0" nameOffsetY="0" player="0" positionX="825" positionY="390" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="aknowledge" infiniteServer="false" name="aknowledge" nameOffsetX="0" nameOffsetY="0" player="0" positionX="825" positionY="540" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="idle" target="enable_system" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="194" yCoord="419"/>
+      <arcpath arcPointType="false" id="1" xCoord="265" yCoord="415"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="enable_system" target="receive_ready" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="274" yCoord="420"/>
+      <arcpath arcPointType="false" id="1" xCoord="362" yCoord="353"/>
+    </arc>
+    <arc id="A2" inscription="1" nameOffsetX="0" nameOffsetY="0" source="enable_system" target="send_ready" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="274" yCoord="420"/>
+      <arcpath arcPointType="false" id="1" xCoord="363" yCoord="500"/>
+    </arc>
+    <arc id="A3" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="receive_ready" target="receive_message" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="389" yCoord="342"/>
+      <arcpath arcPointType="false" id="1" xCoord="564" yCoord="318"/>
+    </arc>
+    <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="message_in" target="receive_message" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="506" yCoord="264"/>
+      <arcpath arcPointType="false" id="1" xCoord="564" yCoord="310"/>
+      <arcpath arcPointType="false" id="2" xCoord="565" yCoord="306"/>
+    </arc>
+    <arc id="A5" inscription="1" nameOffsetX="0" nameOffsetY="0" source="receive_message" target="message_in" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="570" yCoord="300"/>
+      <arcpath arcPointType="false" id="1" xCoord="586" yCoord="216"/>
+      <arcpath arcPointType="false" id="2" xCoord="508" yCoord="249"/>
+    </arc>
+    <arc id="A6" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="send_ready" target="send_message" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="389" yCoord="511"/>
+      <arcpath arcPointType="false" id="1" xCoord="565" yCoord="531"/>
+    </arc>
+    <arc id="A7" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="message_out" target="send_message" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="506" yCoord="590"/>
+      <arcpath arcPointType="false" id="1" xCoord="564" yCoord="543"/>
+    </arc>
+    <arc id="A8" inscription="1" nameOffsetX="0" nameOffsetY="0" source="send_message" target="message_out" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="570" yCoord="555"/>
+      <arcpath arcPointType="false" id="1" xCoord="588" yCoord="651"/>
+      <arcpath arcPointType="false" id="2" xCoord="508" yCoord="607"/>
+    </arc>
+    <arc id="A9" inscription="1" nameOffsetX="0" nameOffsetY="0" source="receive_message" target="P5" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="574" yCoord="315"/>
+      <arcpath arcPointType="false" id="1" xCoord="705" yCoord="341"/>
+    </arc>
+    <arc id="A10" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="P5" target="collect_messages" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="733" yCoord="351"/>
+      <arcpath arcPointType="false" id="1" xCoord="835" yCoord="400"/>
+    </arc>
+    <arc id="A11" inscription="1" nameOffsetX="0" nameOffsetY="0" source="collect_messages" target="storage" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="844" yCoord="405"/>
+      <arcpath arcPointType="false" id="1" xCoord="990" yCoord="391"/>
+    </arc>
+    <arc id="A12" inscription="1" nameOffsetX="0" nameOffsetY="0" source="collect_messages" target="receive_ready" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="834" yCoord="413"/>
+      <arcpath arcPointType="false" id="1" xCoord="604" yCoord="429"/>
+      <arcpath arcPointType="false" id="2" xCoord="389" yCoord="350"/>
+    </arc>
+    <arc id="A13" inscription="1" nameOffsetX="0" nameOffsetY="0" source="send_message" target="aknwolegment" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="574" yCoord="540"/>
+      <arcpath arcPointType="false" id="1" xCoord="735" yCoord="553"/>
+    </arc>
+    <arc id="A14" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="aknwolegment" target="aknowledge" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="764" yCoord="555"/>
+      <arcpath arcPointType="false" id="1" xCoord="834" yCoord="556"/>
+    </arc>
+    <arc id="A15" inscription="1" nameOffsetX="0" nameOffsetY="0" source="aknowledge" target="send_ready" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="835" yCoord="549"/>
+      <arcpath arcPointType="false" id="1" xCoord="582" yCoord="456"/>
+      <arcpath arcPointType="false" id="2" xCoord="389" yCoord="506"/>
+    </arc>
+  </net>
+  <k-bound bound="3"/>
+  <feature isGame="false" isTimed="false"/>
+</pnml>
