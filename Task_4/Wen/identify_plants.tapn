@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+  <shared-transition name="transmitData" player="0" urgent="false"/>
+  <shared-transition name="transData" player="0" urgent="false"/>
+  <net active="true" id="detectiondrone1" type="P/T net">
+    <place displayName="true" id="finish" initialMarking="0" invariant="&lt; inf" name="finish" nameOffsetX="0" nameOffsetY="0" positionX="513" positionY="309"/>
+    <place displayName="true" id="start" initialMarking="1" invariant="&lt; inf" name="start" nameOffsetX="0" nameOffsetY="0" positionX="213" positionY="129"/>
+    <place displayName="true" id="plantIdentification" initialMarking="0" invariant="&lt; inf" name="plantIdentification" nameOffsetX="0" nameOffsetY="0" positionX="218" positionY="309"/>
+    <transition angle="0" displayName="true" id="transData" infiniteServer="false" name="transData" nameOffsetX="0" nameOffsetY="0" player="0" positionX="354" positionY="309" priority="0" urgent="false"/>
+    <transition angle="90" displayName="true" id="takePicture" infiniteServer="false" name="takePicture" nameOffsetX="0" nameOffsetY="0" player="0" positionX="213" positionY="219" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="restart" infiniteServer="false" name="restart" nameOffsetX="56" nameOffsetY="42" player="0" positionX="683" positionY="324" priority="0" urgent="false"/>
+    <arc id="A0" inscription="1" nameOffsetX="0" nameOffsetY="0" source="transData" target="finish" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="373" yCoord="324"/>
+      <arcpath arcPointType="false" id="1" xCoord="513" yCoord="324"/>
+    </arc>
+    <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="start" target="takePicture" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="229" yCoord="158"/>
+      <arcpath arcPointType="false" id="1" xCoord="232" yCoord="229"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="takePicture" target="plantIdentification" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="228" yCoord="238"/>
+      <arcpath arcPointType="false" id="1" xCoord="232" yCoord="309"/>
+    </arc>
+    <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="plantIdentification" target="transData" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="248" yCoord="323"/>
+      <arcpath arcPointType="false" id="1" xCoord="364" yCoord="319"/>
+    </arc>
+    <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="finish" target="restart" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="543" yCoord="325"/>
+      <arcpath arcPointType="false" id="1" xCoord="693" yCoord="340"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="restart" target="start" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="703" yCoord="339"/>
+      <arcpath arcPointType="false" id="1" xCoord="768" yCoord="339"/>
+      <arcpath arcPointType="false" id="2" xCoord="763" yCoord="134"/>
+      <arcpath arcPointType="false" id="3" xCoord="243" yCoord="143"/>
+    </arc>
+  </net>
+  <net active="true" id="Weeder" type="P/T net">
+    <place displayName="true" id="start" initialMarking="1" invariant="&lt; inf" name="start" nameOffsetX="0" nameOffsetY="0" positionX="405" positionY="405"/>
+    <place displayName="true" id="finish" initialMarking="0" invariant="&lt; inf" name="finish" nameOffsetX="0" nameOffsetY="0" positionX="696" positionY="403"/>
+    <transition angle="0" displayName="true" id="removeWeed" infiniteServer="false" name="removeWeed" nameOffsetX="0" nameOffsetY="0" player="0" positionX="540" positionY="405" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="repeat" infiniteServer="false" name="repeat" nameOffsetX="0" nameOffsetY="0" player="0" positionX="525" positionY="270" priority="0" urgent="false"/>
+    <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="start" target="removeWeed" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="434" yCoord="419"/>
+      <arcpath arcPointType="false" id="1" xCoord="550" yCoord="416"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="removeWeed" target="finish" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="559" yCoord="420"/>
+      <arcpath arcPointType="false" id="1" xCoord="696" yCoord="418"/>
+    </arc>
+    <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="finish" target="repeat" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="699" yCoord="408"/>
+      <arcpath arcPointType="false" id="1" xCoord="545" yCoord="280"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="repeat" target="start" type="normal" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="534" yCoord="286"/>
+      <arcpath arcPointType="false" id="1" xCoord="429" yCoord="409"/>
+    </arc>
+  </net>
+  <k-bound bound="3"/>
+  <feature isGame="false" isTimed="false"/>
+</pnml>
