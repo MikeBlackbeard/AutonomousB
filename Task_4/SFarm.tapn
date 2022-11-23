@@ -24,66 +24,66 @@
     </arc>
     <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Enable" target="Capture" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="266" yCoord="286"/>
-      <arcpath arcPointType="false" id="1" xCoord="352" yCoord="233"/>
+      <arcpath arcPointType="false" id="1" xCoord="353" yCoord="233"/>
     </arc>
     <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Capture" target="SugarPlant" type="timed" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="379" yCoord="219"/>
-      <arcpath arcPointType="false" id="1" xCoord="466" yCoord="181"/>
+      <arcpath arcPointType="false" id="1" xCoord="466" yCoord="180"/>
     </arc>
     <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="SugarPlant" target="FieldPositionAnalisys" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="476" yCoord="180"/>
-      <arcpath arcPointType="false" id="1" xCoord="774" yCoord="184"/>
+      <arcpath arcPointType="false" id="1" xCoord="774" yCoord="183"/>
     </arc>
     <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Capture" target="Weed" type="timed" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="379" yCoord="231"/>
-      <arcpath arcPointType="false" id="1" xCoord="479" yCoord="273"/>
+      <arcpath arcPointType="false" id="1" xCoord="478" yCoord="272"/>
     </arc>
     <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="FieldPositionAnalisys" target="Continue" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="788" yCoord="169"/>
+      <arcpath arcPointType="false" id="0" xCoord="787" yCoord="169"/>
       <arcpath arcPointType="false" id="1" xCoord="782" yCoord="105"/>
     </arc>
     <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Continue" target="Capture" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="776" yCoord="91"/>
-      <arcpath arcPointType="false" id="1" xCoord="407" yCoord="95"/>
-      <arcpath arcPointType="false" id="2" xCoord="370" yCoord="211"/>
+      <arcpath arcPointType="false" id="0" xCoord="776" yCoord="90"/>
+      <arcpath arcPointType="false" id="1" xCoord="411" yCoord="99"/>
+      <arcpath arcPointType="false" id="2" xCoord="371" yCoord="211"/>
     </arc>
     <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Weed" target="SaveLocation" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="489" yCoord="272"/>
-      <arcpath arcPointType="false" id="1" xCoord="583" yCoord="356"/>
+      <arcpath arcPointType="false" id="0" xCoord="488" yCoord="272"/>
+      <arcpath arcPointType="false" id="1" xCoord="582" yCoord="356"/>
     </arc>
     <arc id="A8" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Weed" target="ShareLocation" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="489" yCoord="272"/>
+      <arcpath arcPointType="false" id="0" xCoord="488" yCoord="272"/>
       <arcpath arcPointType="false" id="1" xCoord="601" yCoord="264"/>
     </arc>
-    <arc id="A9" inscription="[0,3)" nameOffsetX="0" nameOffsetY="0" source="ShareLocation" target="Check" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="630" yCoord="261"/>
+    <arc id="A9" inscription="[0,3]" nameOffsetX="0" nameOffsetY="0" source="ShareLocation" target="Check" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="630" yCoord="262"/>
       <arcpath arcPointType="false" id="1" xCoord="730" yCoord="256"/>
     </arc>
     <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Check" target="FieldPositionAnalisys" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="740" yCoord="256"/>
-      <arcpath arcPointType="false" id="1" xCoord="781" yCoord="196"/>
+      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="196"/>
     </arc>
     <arc id="A11" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="FieldPositionAnalisys" target="EndOfField" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="804" yCoord="184"/>
-      <arcpath arcPointType="false" id="1" xCoord="909" yCoord="181"/>
+      <arcpath arcPointType="false" id="0" xCoord="803" yCoord="183"/>
+      <arcpath arcPointType="false" id="1" xCoord="909" yCoord="180"/>
     </arc>
     <arc id="A12" inscription="1" nameOffsetX="0" nameOffsetY="0" source="EndOfField" target="init" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="919" yCoord="180"/>
-      <arcpath arcPointType="false" id="1" xCoord="994" yCoord="190"/>
-      <arcpath arcPointType="false" id="2" xCoord="918" yCoord="485"/>
-      <arcpath arcPointType="false" id="3" xCoord="183" yCoord="487"/>
+      <arcpath arcPointType="false" id="1" xCoord="998" yCoord="194"/>
+      <arcpath arcPointType="false" id="2" xCoord="922" yCoord="489"/>
+      <arcpath arcPointType="false" id="3" xCoord="187" yCoord="491"/>
       <arcpath arcPointType="false" id="4" xCoord="173" yCoord="300"/>
     </arc>
     <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="ConnectionError" target="init" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="754" yCoord="345"/>
-      <arcpath arcPointType="false" id="1" xCoord="807" yCoord="359"/>
-      <arcpath arcPointType="false" id="2" xCoord="793" yCoord="433"/>
-      <arcpath arcPointType="false" id="3" xCoord="272" yCoord="443"/>
+      <arcpath arcPointType="false" id="1" xCoord="811" yCoord="363"/>
+      <arcpath arcPointType="false" id="2" xCoord="797" yCoord="437"/>
+      <arcpath arcPointType="false" id="3" xCoord="276" yCoord="447"/>
       <arcpath arcPointType="false" id="4" xCoord="180" yCoord="298"/>
     </arc>
-    <arc id="A13" inscription="[3,inf)" nameOffsetX="0" nameOffsetY="0" source="ShareLocation" target="ConnectionError" type="timed" weight="1">
+    <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="ShareLocation" target="ConnectionError" type="timed" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="628" yCoord="271"/>
-      <arcpath arcPointType="false" id="1" xCoord="744" yCoord="346"/>
+      <arcpath arcPointType="false" id="1" xCoord="744" yCoord="345"/>
     </arc>
   </net>
   <net active="true" id="WeederDron" type="P/T net">
@@ -101,11 +101,11 @@
     <transition angle="0" displayName="true" id="GotToStation" infiniteServer="false" name="GotToStation" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1005" positionY="540" priority="0" urgent="true"/>
     <transition angle="0" displayName="true" id="Fail" infiniteServer="false" name="Fail" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1185" positionY="225" priority="0" urgent="false"/>
     <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="InitWeeder" target="EnableWeeder" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="284" yCoord="397"/>
-      <arcpath arcPointType="false" id="1" xCoord="413" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="284" yCoord="396"/>
+      <arcpath arcPointType="false" id="1" xCoord="412" yCoord="360"/>
     </arc>
     <arc id="A2" inscription="1" nameOffsetX="0" nameOffsetY="0" source="EnableWeeder" target="WeederReady" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="423" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="422" yCoord="360"/>
       <arcpath arcPointType="false" id="1" xCoord="525" yCoord="360"/>
     </arc>
     <arc id="A3" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="WeederReady" target="DriveToPosition" type="timed" weight="1">
@@ -122,15 +122,15 @@
     </arc>
     <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Weed" target="Location" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="443" yCoord="200"/>
-      <arcpath arcPointType="false" id="1" xCoord="540" yCoord="249"/>
+      <arcpath arcPointType="false" id="1" xCoord="540" yCoord="250"/>
     </arc>
     <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Location" target="DriveToPosition" type="timed" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="565" yCoord="266"/>
       <arcpath arcPointType="false" id="1" xCoord="669" yCoord="355"/>
     </arc>
     <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="GoBack" target="WeederReady" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1158" yCoord="484"/>
-      <arcpath arcPointType="false" id="1" xCoord="565" yCoord="472"/>
+      <arcpath arcPointType="false" id="0" xCoord="1157" yCoord="484"/>
+      <arcpath arcPointType="false" id="1" xCoord="569" yCoord="476"/>
       <arcpath arcPointType="false" id="2" xCoord="543" yCoord="374"/>
     </arc>
     <arc id="A11" inscription="[0,3]" nameOffsetX="0" nameOffsetY="0" source="Field" target="GoBack" type="timed" weight="1">
@@ -143,8 +143,8 @@
     </arc>
     <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="GotToStation" target="InitWeeder" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="1014" yCoord="555"/>
-      <arcpath arcPointType="false" id="1" xCoord="278" yCoord="566"/>
-      <arcpath arcPointType="false" id="2" xCoord="270" yCoord="415"/>
+      <arcpath arcPointType="false" id="1" xCoord="282" yCoord="570"/>
+      <arcpath arcPointType="false" id="2" xCoord="271" yCoord="415"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="ConnetionError" target="GotToStation" type="timed" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="1185" yCoord="555"/>
@@ -154,7 +154,7 @@
       <arcpath arcPointType="false" id="0" xCoord="1200" yCoord="255"/>
       <arcpath arcPointType="false" id="1" xCoord="1200" yCoord="540"/>
     </arc>
-    <arc id="A13" inscription="[3,inf)" nameOffsetX="0" nameOffsetY="0" source="Field" target="Fail" type="timed" weight="1">
+    <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Field" target="Fail" type="timed" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="1129" yCoord="322"/>
       <arcpath arcPointType="false" id="1" xCoord="1194" yCoord="240"/>
     </arc>
@@ -205,7 +205,7 @@
     </arc>
     <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="GoBack" target="CollectorReady" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="1157" yCoord="484"/>
-      <arcpath arcPointType="false" id="1" xCoord="565" yCoord="472"/>
+      <arcpath arcPointType="false" id="1" xCoord="569" yCoord="476"/>
       <arcpath arcPointType="false" id="2" xCoord="543" yCoord="374"/>
     </arc>
     <arc id="A11" inscription="[0,3]" nameOffsetX="0" nameOffsetY="0" source="Field" target="GoBack" type="timed" weight="1">
@@ -218,8 +218,8 @@
     </arc>
     <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="GotToStation" target="InitCollector" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="1014" yCoord="555"/>
-      <arcpath arcPointType="false" id="1" xCoord="278" yCoord="566"/>
-      <arcpath arcPointType="false" id="2" xCoord="270" yCoord="415"/>
+      <arcpath arcPointType="false" id="1" xCoord="282" yCoord="570"/>
+      <arcpath arcPointType="false" id="2" xCoord="271" yCoord="415"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="ConnetionError" target="GotToStation" type="timed" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="1185" yCoord="555"/>
@@ -231,8 +231,8 @@
     </arc>
     <arc id="A16" inscription="1" nameOffsetX="0" nameOffsetY="0" source="RemoveWeed" target="WeedLocation" type="normal" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="619" yCoord="165"/>
-      <arcpath arcPointType="false" id="1" xCoord="696" yCoord="167"/>
-      <arcpath arcPointType="false" id="2" xCoord="691" yCoord="210"/>
+      <arcpath arcPointType="false" id="1" xCoord="700" yCoord="171"/>
+      <arcpath arcPointType="false" id="2" xCoord="692" yCoord="210"/>
     </arc>
     <arc id="A17" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="WeedLocation" target="DriveToPosition" type="timed" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="688" yCoord="239"/>
@@ -243,6 +243,8 @@
       <arcpath arcPointType="false" id="1" xCoord="1194" yCoord="240"/>
     </arc>
   </net>
+  <query active="true" approximationDenominator="2" capacity="4" discreteInclusion="false" enableOverApproximation="false" enableUnderApproximation="false" extrapolationOption="null" gcd="false" hashTableSize="null" inclusionPlaces="*NONE*" name="DeadLock" overApproximation="false" pTrie="true" query="AG !(deadlock)" reduction="true" reductionOption="VerifyTAPNdiscreteVerification" searchOption="DFS" symmetry="true" timeDarts="false" traceOption="NONE" useStubbornReduction="true" useTarOption="false"/>
+  <query active="true" approximationDenominator="2" capacity="4" discreteInclusion="false" enableOverApproximation="false" enableUnderApproximation="false" extrapolationOption="null" gcd="false" hashTableSize="null" inclusionPlaces="*NONE*" name="Collector goes back if fail" overApproximation="false" pTrie="true" query="AF WeedCollector.Field = 1" reduction="true" reductionOption="VerifyTAPNdiscreteVerification" searchOption="DFS" symmetry="true" timeDarts="false" traceOption="NONE" useStubbornReduction="false" useTarOption="false"/>
   <k-bound bound="3"/>
   <feature isGame="true" isTimed="true"/>
 </pnml>
