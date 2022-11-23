@@ -2,6 +2,15 @@
                ~~~~~~~~ Autonomous Systems Lab ~~~~~~~~			          #WS2022/2023 - ELE_7 - HSHL
  
 
+# ToDo
+
+## Diagrams
+
+* Activity Diagrams
+* Use Case Diagram
+* Presentation
+
+
 We are Team-1 of Autonoumous systems' project and this is our Github repository.
 
 Members of the group:
