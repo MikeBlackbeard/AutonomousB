@@ -19,228 +19,228 @@
     <transition angle="0" displayName="true" id="EndOfField" infiniteServer="false" name="EndOfField" nameOffsetX="0" nameOffsetY="0" player="0" positionX="900" positionY="165" priority="0" urgent="false"/>
     <transition angle="0" displayName="true" id="ConnectionError" infiniteServer="false" name="ConnectionError" nameOffsetX="0" nameOffsetY="0" player="0" positionX="735" positionY="330" priority="0" urgent="false"/>
     <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="init" target="Enable" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="187" yCoord="286"/>
-      <arcpath arcPointType="false" id="1" xCoord="256" yCoord="286"/>
+      <arcpath arcPointType="false" id="0" xCoord="187" yCoord="287"/>
+      <arcpath arcPointType="false" id="1" xCoord="257" yCoord="287"/>
     </arc>
     <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Enable" target="Capture" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="266" yCoord="286"/>
-      <arcpath arcPointType="false" id="1" xCoord="353" yCoord="233"/>
+      <arcpath arcPointType="false" id="0" xCoord="267" yCoord="287"/>
+      <arcpath arcPointType="false" id="1" xCoord="353" yCoord="234"/>
     </arc>
     <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Capture" target="SugarPlant" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="379" yCoord="219"/>
-      <arcpath arcPointType="false" id="1" xCoord="466" yCoord="180"/>
+      <arcpath arcPointType="false" id="0" xCoord="380" yCoord="220"/>
+      <arcpath arcPointType="false" id="1" xCoord="467" yCoord="181"/>
     </arc>
     <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="SugarPlant" target="FieldPositionAnalisys" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="476" yCoord="180"/>
-      <arcpath arcPointType="false" id="1" xCoord="774" yCoord="183"/>
+      <arcpath arcPointType="false" id="0" xCoord="477" yCoord="181"/>
+      <arcpath arcPointType="false" id="1" xCoord="774" yCoord="184"/>
     </arc>
     <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Capture" target="Weed" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="379" yCoord="231"/>
-      <arcpath arcPointType="false" id="1" xCoord="478" yCoord="272"/>
+      <arcpath arcPointType="false" id="0" xCoord="380" yCoord="232"/>
+      <arcpath arcPointType="false" id="1" xCoord="479" yCoord="273"/>
     </arc>
     <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="FieldPositionAnalisys" target="Continue" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="787" yCoord="169"/>
-      <arcpath arcPointType="false" id="1" xCoord="782" yCoord="105"/>
+      <arcpath arcPointType="false" id="0" xCoord="788" yCoord="169"/>
+      <arcpath arcPointType="false" id="1" xCoord="783" yCoord="105"/>
     </arc>
     <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Continue" target="Capture" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="776" yCoord="90"/>
+      <arcpath arcPointType="false" id="0" xCoord="777" yCoord="91"/>
       <arcpath arcPointType="false" id="1" xCoord="411" yCoord="99"/>
-      <arcpath arcPointType="false" id="2" xCoord="371" yCoord="211"/>
+      <arcpath arcPointType="false" id="2" xCoord="371" yCoord="212"/>
     </arc>
     <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Weed" target="SaveLocation" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="488" yCoord="272"/>
-      <arcpath arcPointType="false" id="1" xCoord="582" yCoord="356"/>
+      <arcpath arcPointType="false" id="0" xCoord="489" yCoord="273"/>
+      <arcpath arcPointType="false" id="1" xCoord="583" yCoord="357"/>
     </arc>
     <arc id="A8" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Weed" target="ShareLocation" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="488" yCoord="272"/>
+      <arcpath arcPointType="false" id="0" xCoord="489" yCoord="273"/>
       <arcpath arcPointType="false" id="1" xCoord="601" yCoord="264"/>
     </arc>
     <arc id="A9" inscription="[0,3]" nameOffsetX="0" nameOffsetY="0" source="ShareLocation" target="Check" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="630" yCoord="262"/>
-      <arcpath arcPointType="false" id="1" xCoord="730" yCoord="256"/>
+      <arcpath arcPointType="false" id="0" xCoord="631" yCoord="262"/>
+      <arcpath arcPointType="false" id="1" xCoord="731" yCoord="257"/>
     </arc>
     <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Check" target="FieldPositionAnalisys" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="740" yCoord="256"/>
-      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="196"/>
+      <arcpath arcPointType="false" id="0" xCoord="741" yCoord="257"/>
+      <arcpath arcPointType="false" id="1" xCoord="781" yCoord="197"/>
     </arc>
     <arc id="A11" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="FieldPositionAnalisys" target="EndOfField" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="803" yCoord="183"/>
-      <arcpath arcPointType="false" id="1" xCoord="909" yCoord="180"/>
+      <arcpath arcPointType="false" id="0" xCoord="804" yCoord="184"/>
+      <arcpath arcPointType="false" id="1" xCoord="910" yCoord="181"/>
     </arc>
     <arc id="A12" inscription="1" nameOffsetX="0" nameOffsetY="0" source="EndOfField" target="init" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="919" yCoord="180"/>
+      <arcpath arcPointType="false" id="0" xCoord="920" yCoord="181"/>
       <arcpath arcPointType="false" id="1" xCoord="998" yCoord="194"/>
       <arcpath arcPointType="false" id="2" xCoord="922" yCoord="489"/>
       <arcpath arcPointType="false" id="3" xCoord="187" yCoord="491"/>
-      <arcpath arcPointType="false" id="4" xCoord="173" yCoord="300"/>
+      <arcpath arcPointType="false" id="4" xCoord="173" yCoord="301"/>
     </arc>
     <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="ConnectionError" target="init" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="754" yCoord="345"/>
+      <arcpath arcPointType="false" id="0" xCoord="755" yCoord="345"/>
       <arcpath arcPointType="false" id="1" xCoord="811" yCoord="363"/>
       <arcpath arcPointType="false" id="2" xCoord="797" yCoord="437"/>
       <arcpath arcPointType="false" id="3" xCoord="276" yCoord="447"/>
-      <arcpath arcPointType="false" id="4" xCoord="180" yCoord="298"/>
+      <arcpath arcPointType="false" id="4" xCoord="181" yCoord="299"/>
     </arc>
-    <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="ShareLocation" target="ConnectionError" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="628" yCoord="271"/>
-      <arcpath arcPointType="false" id="1" xCoord="744" yCoord="345"/>
+    <arc id="A13" inscription="[3,inf)" nameOffsetX="0" nameOffsetY="0" source="ShareLocation" target="ConnectionError" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="629" yCoord="271"/>
+      <arcpath arcPointType="false" id="1" xCoord="745" yCoord="346"/>
     </arc>
   </net>
   <net active="true" id="WeederDron" type="P/T net">
-    <place displayName="true" id="InitWeeder" initialMarking="1" invariant="&lt; inf" name="InitWeeder" nameOffsetX="0" nameOffsetY="0" positionX="255" positionY="386"/>
-    <place displayName="true" id="WeederReady" initialMarking="0" invariant="&lt; inf" name="WeederReady" nameOffsetX="0" nameOffsetY="0" positionX="525" positionY="345"/>
-    <place displayName="true" id="WeedPosition" initialMarking="0" invariant="&lt; inf" name="WeedPosition" nameOffsetX="0" nameOffsetY="0" positionX="810" positionY="345"/>
-    <place displayName="true" id="Location" initialMarking="0" invariant="&lt; inf" name="Location" nameOffsetX="0" nameOffsetY="0" positionX="539" positionY="242"/>
-    <place displayName="true" id="Field" initialMarking="0" invariant="&lt; inf" name="Field" nameOffsetX="0" nameOffsetY="0" positionX="1105" positionY="319"/>
-    <place displayName="true" id="ConnetionError" initialMarking="0" invariant="&lt; inf" name="ConnetionError" nameOffsetX="0" nameOffsetY="0" positionX="1185" positionY="540"/>
-    <transition angle="0" displayName="true" id="EnableWeeder" infiniteServer="false" name="EnableWeeder" nameOffsetX="0" nameOffsetY="0" player="0" positionX="403" positionY="345" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="Weed" infiniteServer="false" name="Weed" nameOffsetX="0" nameOffsetY="0" player="0" positionX="424" positionY="185" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="DriveToPosition" infiniteServer="false" name="DriveToPosition" nameOffsetX="0" nameOffsetY="0" player="0" positionX="659" positionY="345" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="RemoveWeed" infiniteServer="false" name="RemoveWeed" nameOffsetX="0" nameOffsetY="0" player="0" positionX="930" positionY="345" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="GoBack" infiniteServer="false" name="GoBack" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1148" positionY="469" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="GotToStation" infiniteServer="false" name="GotToStation" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1005" positionY="540" priority="0" urgent="true"/>
-    <transition angle="0" displayName="true" id="Fail" infiniteServer="false" name="Fail" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1185" positionY="225" priority="0" urgent="false"/>
+    <place displayName="true" id="InitWeeder" initialMarking="1" invariant="&lt; inf" name="InitWeeder" nameOffsetX="0" nameOffsetY="0" positionX="118" positionY="341"/>
+    <place displayName="true" id="WeederReady" initialMarking="0" invariant="&lt; inf" name="WeederReady" nameOffsetX="0" nameOffsetY="0" positionX="388" positionY="299"/>
+    <place displayName="true" id="WeedPosition" initialMarking="0" invariant="&lt; inf" name="WeedPosition" nameOffsetX="0" nameOffsetY="0" positionX="672" positionY="299"/>
+    <place displayName="true" id="Location" initialMarking="0" invariant="&lt; inf" name="Location" nameOffsetX="0" nameOffsetY="0" positionX="402" positionY="197"/>
+    <place displayName="true" id="Field" initialMarking="0" invariant="&lt; inf" name="Field" nameOffsetX="0" nameOffsetY="0" positionX="968" positionY="274"/>
+    <place displayName="true" id="ConnetionError" initialMarking="0" invariant="&lt; inf" name="ConnetionError" nameOffsetX="0" nameOffsetY="0" positionX="1048" positionY="494"/>
+    <transition angle="0" displayName="true" id="EnableWeeder" infiniteServer="false" name="EnableWeeder" nameOffsetX="0" nameOffsetY="0" player="0" positionX="267" positionY="299" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Weed" infiniteServer="false" name="Weed" nameOffsetX="0" nameOffsetY="0" player="0" positionX="287" positionY="139" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="DriveToPosition" infiniteServer="false" name="DriveToPosition" nameOffsetX="0" nameOffsetY="0" player="0" positionX="522" positionY="299" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="RemoveWeed" infiniteServer="false" name="RemoveWeed" nameOffsetX="0" nameOffsetY="0" player="0" positionX="792" positionY="299" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="GoBack" infiniteServer="false" name="GoBack" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1011" positionY="424" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="GotToStation" infiniteServer="false" name="GotToStation" nameOffsetX="0" nameOffsetY="0" player="0" positionX="868" positionY="494" priority="0" urgent="true"/>
+    <transition angle="0" displayName="true" id="Fail" infiniteServer="false" name="Fail" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1048" positionY="179" priority="0" urgent="false"/>
     <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="InitWeeder" target="EnableWeeder" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="284" yCoord="396"/>
-      <arcpath arcPointType="false" id="1" xCoord="412" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="147" yCoord="351"/>
+      <arcpath arcPointType="false" id="1" xCoord="276" yCoord="315"/>
     </arc>
     <arc id="A2" inscription="1" nameOffsetX="0" nameOffsetY="0" source="EnableWeeder" target="WeederReady" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="422" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="286" yCoord="314"/>
+      <arcpath arcPointType="false" id="1" xCoord="388" yCoord="314"/>
     </arc>
     <arc id="A3" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="WeederReady" target="DriveToPosition" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="554" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="668" yCoord="365"/>
+      <arcpath arcPointType="false" id="0" xCoord="417" yCoord="314"/>
+      <arcpath arcPointType="false" id="1" xCoord="531" yCoord="320"/>
     </arc>
     <arc id="A4" inscription="1" nameOffsetX="0" nameOffsetY="0" source="DriveToPosition" target="WeedPosition" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="678" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="810" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="541" yCoord="314"/>
+      <arcpath arcPointType="false" id="1" xCoord="672" yCoord="314"/>
     </arc>
     <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="WeedPosition" target="RemoveWeed" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="840" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="939" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="701" yCoord="314"/>
+      <arcpath arcPointType="false" id="1" xCoord="801" yCoord="315"/>
     </arc>
     <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Weed" target="Location" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="443" yCoord="200"/>
-      <arcpath arcPointType="false" id="1" xCoord="540" yCoord="250"/>
+      <arcpath arcPointType="false" id="0" xCoord="306" yCoord="154"/>
+      <arcpath arcPointType="false" id="1" xCoord="404" yCoord="205"/>
     </arc>
     <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Location" target="DriveToPosition" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="565" yCoord="266"/>
-      <arcpath arcPointType="false" id="1" xCoord="669" yCoord="355"/>
+      <arcpath arcPointType="false" id="0" xCoord="428" yCoord="221"/>
+      <arcpath arcPointType="false" id="1" xCoord="532" yCoord="310"/>
     </arc>
     <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="GoBack" target="WeederReady" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1157" yCoord="484"/>
-      <arcpath arcPointType="false" id="1" xCoord="569" yCoord="476"/>
-      <arcpath arcPointType="false" id="2" xCoord="543" yCoord="374"/>
+      <arcpath arcPointType="false" id="0" xCoord="1020" yCoord="440"/>
+      <arcpath arcPointType="false" id="1" xCoord="432" yCoord="431"/>
+      <arcpath arcPointType="false" id="2" xCoord="406" yCoord="329"/>
     </arc>
     <arc id="A11" inscription="[0,3]" nameOffsetX="0" nameOffsetY="0" source="Field" target="GoBack" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1124" yCoord="348"/>
-      <arcpath arcPointType="false" id="1" xCoord="1163" yCoord="469"/>
+      <arcpath arcPointType="false" id="0" xCoord="987" yCoord="304"/>
+      <arcpath arcPointType="false" id="1" xCoord="1026" yCoord="424"/>
     </arc>
     <arc id="A9" inscription="1" nameOffsetX="0" nameOffsetY="0" source="RemoveWeed" target="Field" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="949" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="1105" yCoord="336"/>
+      <arcpath arcPointType="false" id="0" xCoord="811" yCoord="314"/>
+      <arcpath arcPointType="false" id="1" xCoord="968" yCoord="291"/>
     </arc>
     <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="GotToStation" target="InitWeeder" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1014" yCoord="555"/>
-      <arcpath arcPointType="false" id="1" xCoord="282" yCoord="570"/>
-      <arcpath arcPointType="false" id="2" xCoord="271" yCoord="415"/>
+      <arcpath arcPointType="false" id="0" xCoord="877" yCoord="510"/>
+      <arcpath arcPointType="false" id="1" xCoord="144" yCoord="524"/>
+      <arcpath arcPointType="false" id="2" xCoord="134" yCoord="370"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="ConnetionError" target="GotToStation" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1185" yCoord="555"/>
-      <arcpath arcPointType="false" id="1" xCoord="1024" yCoord="555"/>
+      <arcpath arcPointType="false" id="0" xCoord="1048" yCoord="509"/>
+      <arcpath arcPointType="false" id="1" xCoord="887" yCoord="509"/>
     </arc>
     <arc id="A15" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Fail" target="ConnetionError" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1200" yCoord="255"/>
-      <arcpath arcPointType="false" id="1" xCoord="1200" yCoord="540"/>
+      <arcpath arcPointType="false" id="0" xCoord="1063" yCoord="209"/>
+      <arcpath arcPointType="false" id="1" xCoord="1063" yCoord="494"/>
     </arc>
-    <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Field" target="Fail" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1129" yCoord="322"/>
-      <arcpath arcPointType="false" id="1" xCoord="1194" yCoord="240"/>
+    <arc id="A13" inscription="[3,inf)" nameOffsetX="0" nameOffsetY="0" source="Field" target="Fail" type="timed" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="991" yCoord="277"/>
+      <arcpath arcPointType="false" id="1" xCoord="1057" yCoord="195"/>
     </arc>
   </net>
   <net active="true" id="WeedCollector" type="P/T net">
-    <place displayName="true" id="InitCollector" initialMarking="1" invariant="&lt; inf" name="InitCollector" nameOffsetX="0" nameOffsetY="0" positionX="255" positionY="386"/>
-    <place displayName="true" id="CollectorReady" initialMarking="0" invariant="&lt; inf" name="CollectorReady" nameOffsetX="0" nameOffsetY="0" positionX="525" positionY="345"/>
-    <place displayName="true" id="RemovedWeedPosition" initialMarking="0" invariant="&lt; inf" name="RemovedWeedPosition" nameOffsetX="0" nameOffsetY="0" positionX="810" positionY="345"/>
-    <place displayName="true" id="Location" initialMarking="0" invariant="&lt; inf" name="Location" nameOffsetX="0" nameOffsetY="0" positionX="539" positionY="242"/>
-    <place displayName="true" id="Field" initialMarking="0" invariant="&lt; inf" name="Field" nameOffsetX="0" nameOffsetY="0" positionX="1105" positionY="319"/>
-    <place displayName="true" id="ConnetionError" initialMarking="0" invariant="&lt; inf" name="ConnetionError" nameOffsetX="0" nameOffsetY="0" positionX="1185" positionY="540"/>
-    <place displayName="true" id="WeedLocation" initialMarking="0" invariant="&lt; inf" name="WeedLocation" nameOffsetX="0" nameOffsetY="0" positionX="675" positionY="210"/>
-    <transition angle="0" displayName="true" id="EnableCollector" infiniteServer="false" name="EnableCollector" nameOffsetX="0" nameOffsetY="0" player="0" positionX="403" positionY="345" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="Weed" infiniteServer="false" name="Weed" nameOffsetX="0" nameOffsetY="0" player="0" positionX="424" positionY="185" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="DriveToPosition" infiniteServer="false" name="DriveToPosition" nameOffsetX="0" nameOffsetY="0" player="0" positionX="659" positionY="345" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="Collect" infiniteServer="false" name="Collect" nameOffsetX="0" nameOffsetY="0" player="0" positionX="930" positionY="345" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="GoBack" infiniteServer="false" name="GoBack" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1148" positionY="469" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="GotToStation" infiniteServer="false" name="GotToStation" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1005" positionY="540" priority="0" urgent="true"/>
-    <transition angle="0" displayName="true" id="Fail" infiniteServer="false" name="Fail" nameOffsetX="0" nameOffsetY="0" player="0" positionX="1185" positionY="225" priority="0" urgent="false"/>
-    <transition angle="0" displayName="true" id="RemoveWeed" infiniteServer="false" name="RemoveWeed" nameOffsetX="0" nameOffsetY="0" player="0" positionX="600" positionY="150" priority="0" urgent="false"/>
+    <place displayName="true" id="InitCollector" initialMarking="1" invariant="&lt; inf" name="InitCollector" nameOffsetX="0" nameOffsetY="0" positionX="114" positionY="334"/>
+    <place displayName="true" id="CollectorReady" initialMarking="0" invariant="&lt; inf" name="CollectorReady" nameOffsetX="0" nameOffsetY="0" positionX="384" positionY="294"/>
+    <place displayName="true" id="RemovedWeedPosition" initialMarking="0" invariant="&lt; inf" name="RemovedWeedPosition" nameOffsetX="0" nameOffsetY="0" positionX="659" positionY="294"/>
+    <place displayName="true" id="Location" initialMarking="0" invariant="&lt; inf" name="Location" nameOffsetX="0" nameOffsetY="0" positionX="399" positionY="189"/>
+    <place displayName="true" id="Field" initialMarking="0" invariant="&lt; inf" name="Field" nameOffsetX="0" nameOffsetY="0" positionX="894" positionY="279"/>
+    <place displayName="true" id="ConnetionError" initialMarking="0" invariant="&lt; inf" name="ConnetionError" nameOffsetX="0" nameOffsetY="0" positionX="979" positionY="489"/>
+    <place displayName="true" id="WeedLocation" initialMarking="0" invariant="&lt; inf" name="WeedLocation" nameOffsetX="0" nameOffsetY="0" positionX="534" positionY="159"/>
+    <transition angle="0" displayName="true" id="EnableCollector" infiniteServer="false" name="EnableCollector" nameOffsetX="0" nameOffsetY="0" player="0" positionX="259" positionY="294" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Weed" infiniteServer="false" name="Weed" nameOffsetX="0" nameOffsetY="0" player="0" positionX="284" positionY="134" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="DriveToPosition" infiniteServer="false" name="DriveToPosition" nameOffsetX="0" nameOffsetY="0" player="0" positionX="519" positionY="294" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="Collect" infiniteServer="false" name="Collect" nameOffsetX="0" nameOffsetY="0" player="0" positionX="779" positionY="294" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="GoBack" infiniteServer="false" name="GoBack" nameOffsetX="0" nameOffsetY="0" player="0" positionX="874" positionY="409" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="GotToStation" infiniteServer="false" name="GotToStation" nameOffsetX="0" nameOffsetY="0" player="0" positionX="844" positionY="499" priority="0" urgent="true"/>
+    <transition angle="0" displayName="true" id="Fail" infiniteServer="false" name="Fail" nameOffsetX="0" nameOffsetY="0" player="0" positionX="994" positionY="194" priority="0" urgent="false"/>
+    <transition angle="0" displayName="true" id="RemoveWeed" infiniteServer="false" name="RemoveWeed" nameOffsetX="0" nameOffsetY="0" player="0" positionX="459" positionY="99" priority="0" urgent="false"/>
     <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="InitCollector" target="EnableCollector" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="284" yCoord="396"/>
-      <arcpath arcPointType="false" id="1" xCoord="412" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="144" yCoord="345"/>
+      <arcpath arcPointType="false" id="1" xCoord="269" yCoord="310"/>
     </arc>
     <arc id="A2" inscription="1" nameOffsetX="0" nameOffsetY="0" source="EnableCollector" target="CollectorReady" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="422" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="279" yCoord="309"/>
+      <arcpath arcPointType="false" id="1" xCoord="384" yCoord="309"/>
     </arc>
     <arc id="A3" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="CollectorReady" target="DriveToPosition" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="554" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="668" yCoord="365"/>
+      <arcpath arcPointType="false" id="0" xCoord="414" yCoord="309"/>
+      <arcpath arcPointType="false" id="1" xCoord="529" yCoord="315"/>
     </arc>
     <arc id="A4" inscription="1" nameOffsetX="0" nameOffsetY="0" source="DriveToPosition" target="RemovedWeedPosition" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="678" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="810" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="539" yCoord="309"/>
+      <arcpath arcPointType="false" id="1" xCoord="659" yCoord="309"/>
     </arc>
     <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="RemovedWeedPosition" target="Collect" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="840" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="939" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="689" yCoord="309"/>
+      <arcpath arcPointType="false" id="1" xCoord="789" yCoord="310"/>
     </arc>
     <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Weed" target="Location" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="443" yCoord="200"/>
-      <arcpath arcPointType="false" id="1" xCoord="540" yCoord="250"/>
+      <arcpath arcPointType="false" id="0" xCoord="304" yCoord="149"/>
+      <arcpath arcPointType="false" id="1" xCoord="401" yCoord="197"/>
     </arc>
     <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Location" target="DriveToPosition" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="565" yCoord="266"/>
-      <arcpath arcPointType="false" id="1" xCoord="669" yCoord="355"/>
+      <arcpath arcPointType="false" id="0" xCoord="425" yCoord="214"/>
+      <arcpath arcPointType="false" id="1" xCoord="529" yCoord="305"/>
     </arc>
     <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="GoBack" target="CollectorReady" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1157" yCoord="484"/>
-      <arcpath arcPointType="false" id="1" xCoord="569" yCoord="476"/>
-      <arcpath arcPointType="false" id="2" xCoord="543" yCoord="374"/>
+      <arcpath arcPointType="false" id="0" xCoord="884" yCoord="425"/>
+      <arcpath arcPointType="false" id="1" xCoord="429" yCoord="424"/>
+      <arcpath arcPointType="false" id="2" xCoord="403" yCoord="324"/>
     </arc>
     <arc id="A11" inscription="[0,3]" nameOffsetX="0" nameOffsetY="0" source="Field" target="GoBack" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1124" yCoord="348"/>
-      <arcpath arcPointType="false" id="1" xCoord="1163" yCoord="469"/>
+      <arcpath arcPointType="false" id="0" xCoord="906" yCoord="309"/>
+      <arcpath arcPointType="false" id="1" xCoord="890" yCoord="409"/>
     </arc>
     <arc id="A9" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Collect" target="Field" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="949" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="1105" yCoord="336"/>
+      <arcpath arcPointType="false" id="0" xCoord="799" yCoord="309"/>
+      <arcpath arcPointType="false" id="1" xCoord="894" yCoord="296"/>
     </arc>
     <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="GotToStation" target="InitCollector" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1014" yCoord="555"/>
-      <arcpath arcPointType="false" id="1" xCoord="282" yCoord="570"/>
-      <arcpath arcPointType="false" id="2" xCoord="271" yCoord="415"/>
+      <arcpath arcPointType="false" id="0" xCoord="854" yCoord="515"/>
+      <arcpath arcPointType="false" id="1" xCoord="139" yCoord="519"/>
+      <arcpath arcPointType="false" id="2" xCoord="130" yCoord="364"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="ConnetionError" target="GotToStation" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1185" yCoord="555"/>
-      <arcpath arcPointType="false" id="1" xCoord="1024" yCoord="555"/>
+      <arcpath arcPointType="false" id="0" xCoord="979" yCoord="505"/>
+      <arcpath arcPointType="false" id="1" xCoord="864" yCoord="514"/>
     </arc>
     <arc id="A15" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Fail" target="ConnetionError" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1200" yCoord="255"/>
-      <arcpath arcPointType="false" id="1" xCoord="1200" yCoord="540"/>
+      <arcpath arcPointType="false" id="0" xCoord="1009" yCoord="224"/>
+      <arcpath arcPointType="false" id="1" xCoord="995" yCoord="489"/>
     </arc>
     <arc id="A16" inscription="1" nameOffsetX="0" nameOffsetY="0" source="RemoveWeed" target="WeedLocation" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="619" yCoord="165"/>
-      <arcpath arcPointType="false" id="1" xCoord="700" yCoord="171"/>
-      <arcpath arcPointType="false" id="2" xCoord="692" yCoord="210"/>
+      <arcpath arcPointType="false" id="0" xCoord="479" yCoord="114"/>
+      <arcpath arcPointType="false" id="1" xCoord="559" yCoord="119"/>
+      <arcpath arcPointType="false" id="2" xCoord="551" yCoord="159"/>
     </arc>
     <arc id="A17" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="WeedLocation" target="DriveToPosition" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="688" yCoord="239"/>
-      <arcpath arcPointType="false" id="1" xCoord="674" yCoord="345"/>
+      <arcpath arcPointType="false" id="0" xCoord="547" yCoord="189"/>
+      <arcpath arcPointType="false" id="1" xCoord="535" yCoord="294"/>
     </arc>
     <arc id="A13" inscription="[3,inf)" nameOffsetX="0" nameOffsetY="0" source="Field" target="Fail" type="timed" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="1129" yCoord="322"/>
-      <arcpath arcPointType="false" id="1" xCoord="1194" yCoord="240"/>
+      <arcpath arcPointType="false" id="0" xCoord="920" yCoord="284"/>
+      <arcpath arcPointType="false" id="1" xCoord="1004" yCoord="210"/>
     </arc>
   </net>
   <query active="true" approximationDenominator="2" capacity="4" discreteInclusion="false" enableOverApproximation="false" enableUnderApproximation="false" extrapolationOption="null" gcd="false" hashTableSize="null" inclusionPlaces="*NONE*" name="DeadLock" overApproximation="false" pTrie="true" query="AG !(deadlock)" reduction="true" reductionOption="VerifyTAPNdiscreteVerification" searchOption="DFS" symmetry="true" timeDarts="false" traceOption="NONE" useStubbornReduction="true" useTarOption="false"/>
